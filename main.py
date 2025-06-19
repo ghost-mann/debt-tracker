@@ -31,6 +31,9 @@ df = pd.DataFrame([{
 # drop rows with missing values
 df = df.dropna(axis=0)
 
+# converting date to datetime object
+df['date'] = pd.to_datetime(df['date'], format='%Y')
+
 
 print(df)
 
